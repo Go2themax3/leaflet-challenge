@@ -2,10 +2,10 @@
 fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson')
   .then(response => response.json())
   .then(data => {
-    // Create a Leaflet map instance
+
     const map = L.map('map').setView([0, 0], 2);
 
-    // Add the tile layer to the map
+    // Add the tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
     }).addTo(map);
@@ -27,7 +27,7 @@ fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojso
       }
     }
 
-    // Iterate over the earthquake data and create circle markers
+    // Create circle markers
     data.features.forEach(feature => {
       const coordinates = feature.geometry.coordinates;
       const magnitude = feature.properties.mag;
@@ -43,7 +43,7 @@ fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojso
         fillOpacity: 0.8
       });
 
-      // Bind a popup with additional information to each marker
+      // Popup with additional information
       circle.bindPopup(`
         Location: ${feature.properties.place}<br>
         Magnitude: ${magnitude}<br>
