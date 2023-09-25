@@ -1,7 +1,9 @@
 # leaflet-challenge
 Overview
 This project is aimed at creating visualizations for the United States Geological Survey (USGS) earthquake data. USGS is responsible for providing scientific data about natural hazards and develops new methods to supply timely, relevant information about the Earth and its processes. This project will help USGS in representing the vast amount of data they collect in a more meaningful and educative way.
+
 Repository Structure
+
 leaflet-challenge
 │   README.md
 │
@@ -20,7 +22,9 @@ leaflet-challenge
     │   style.css
     └───static
         └───js
+        
 Create the Earthquake Visualization
+
 Set up your project repository as instructed in the "Before You Begin" section.
 Download and use the provided Module 15 Challenge files.
 Select a USGS GeoJSON dataset from the USGS GeoJSON Feed for visualization.
@@ -30,6 +34,7 @@ Include popups to provide additional information about the earthquake when its a
 Create a legend to provide context for your map data.
 
 How to Run
+
 Clone this repository to your local machine.
 Navigate to the project folder and open index.html in your web browser.
 For Part 2, navigate to the Leaflet-Part-2 directory and open its index.html.
